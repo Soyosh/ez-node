@@ -14,16 +14,43 @@
       ]
     },
     "inbounds": [
-      {
-        "tag": "Shadowsocks",
-        "listen": "127.0.0.1",
-        "port": 6292,
-        "protocol": "shadowsocks",
-        "settings": {
-          "clients": [],
-          "network": "tcp,udp"
+        {
+            "tag": "TEST",
+            "listen": "0.0.0.0",
+            "port": 9333,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [],
+                "decryption": "none"
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "none",
+                "wsSettings": {
+                    "path": "/"
+                }
+            },
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
+            }
         }
-      }
+  },
+  "sniffing": {
+    "enabled": true,
+    "destOverride": [
+      "http",
+      "tls",
+      "quic",
+      "fakedns"
+    ],
+    "metadataOnly": false,
+    "routeOnly": false
+  }
+}
     ],
     "outbounds": [
       {
