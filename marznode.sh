@@ -153,7 +153,7 @@ hversion=${hversion#app/v}
 arch=$(x_architecture)
 cd "/opt/marznode/$node_directory/xray"
 
-wget -O config.json "https://raw.githubusercontent.com/mikeesierrah/ez-node/refs/heads/main/etc/xray.json"
+wget -O config.json "https://raw.githubusercontent.com/Soyosh/ez-node/refs/heads/main/etc/xray.json"
 
 print_info "Fetching Xray core version $xversion..."
 
